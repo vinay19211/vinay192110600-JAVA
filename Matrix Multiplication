@@ -1,0 +1,70 @@
+import java.util.*;
+class Practice
+{
+	public static void main(String args[])
+	{
+		int i,j,k,r,c;
+		int a[][] =  new int[10][10];
+		int b[][] =  new int[10][10];
+		int mul[][] =  new int[10][10];
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the no of rows= ");
+		r = s.nextInt();
+		System.out.println("Enter the no of column=");
+		c = s.nextInt();
+		System.out.println("Enter the elements in matrix1");
+		for(i=0;i<r;i++)
+		{
+			for(j=0;j<c;j++)
+			{
+				a[i][j]=s.nextInt();
+			}
+		}
+		System.out.println("Enter the elements in matrix2");
+		for(i=0;i<r;i++)
+		{
+			for(j=0;j<c;j++)
+			{
+				b[i][j]=s.nextInt();
+			}
+		}
+		System.out.println(" matrix1");
+		for(i=0;i<r;i++)
+		{
+			for(j=0;j<c;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+		System.out.println(" matrix2");
+		for(i=0;i<r;i++)
+		{
+			for(j=0;j<c;j++)
+			{
+				System.out.print(b[i][j]+" ");
+			}
+			System.out.println();
+		}
+		for(i=0;i<r;i++)
+		{
+			for(j=0;j<c;j++)
+			{
+				mul[i][j]=0;
+				for(k=0;k<c;k++)
+				{
+					mul[i][j]+=a[i][k]*b[k][j];
+				}
+			}
+		}
+		System.out.println("Multiplication matrix");
+		for(i=0;i<r;i++)
+		{
+			for(j=0;j<c;j++)
+			{
+				System.out.print(mul[i][j]+"  ");
+			}
+				System.out.println();
+		}
+	}
+}
